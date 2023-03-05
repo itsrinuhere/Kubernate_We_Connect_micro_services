@@ -1,0 +1,2 @@
+Can not deserialize instance of api.main.UserSystem.User out of START_ARRAY token
+ at [Source: org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$UnCloseableInputStream@6218b491; line: 1, column: 1]

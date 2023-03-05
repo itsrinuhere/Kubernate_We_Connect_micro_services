@@ -1,0 +1,44 @@
+bug
+Feb 06, 2023 9:29:40 PM org.glassfish.jersey.server.ServerRuntime$Responder writeResponse
+SEVERE: An I/O error has occurred while writing a response message entity to the container output stream.
+java.lang.IllegalStateException: The output stream has already been closed.
+
+https://www.youtube.com/watch?v=ZZddxpxGQPE&ab_channel=FutureStudio
+task 1 rest client version 
+task 2 login and signup
+task 3 nosql database 
+task 4 create android application
+https://www.youtube.com/watch?v=7wCYtRJCHR8&ab_channel=studywithnesya
+
+
+https://stackoverflow.com/questions/221442/how-do-you-create-a-rest-client-for-java
+
+https://www.youtube.com/watch?v=q7bkBoD8Maw&list=PLK0V_H0fCvPhFH9P7dSwus66FhqUiQo7S&index=9
+https://stackoverflow.com/questions/57107151/download-pdf-from-restful-web-services
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.weconnect.weconnectv1.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.weconnect.weconnectv1.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.weconnect.weconnectv1.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>
