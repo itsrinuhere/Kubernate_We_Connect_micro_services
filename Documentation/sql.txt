@@ -1,0 +1,59 @@
+create table appuser
+( 
+	userid  serial,
+	userhallticket varchar(20) unique not null,
+	username varchar(20) NOT NULL,
+	userpassword varchar(20) NOT NULL,
+	primary key(userid)
+)
+create table appadministrator
+( 
+	adminid serial,
+	adminusername varchar(20) not null,
+	adminpassword varchar(20) not null,
+	primary key(adminid)
+)
+create table appacess
+( 
+	accessid serial,
+	acesskey varchar(2) NOT NULL,
+	userid int,
+	adminid int,
+	primary key(accessid),
+	constraint fk_user
+	foreign key(userid)
+	REFERENCES appuser(userid),
+	constraint fk_administrator
+	foreign key(adminid)
+	REFERENCES appadministrator(adminid)
+)
+
+
+  create table AlertModel (
+       AlertId bigint not null,
+        AlertMessage varchar(20) not null,
+        AlertTitle varchar(20) not null,
+        date TIMESTAMP DEFAULT CURRENT_TIMESTAMP not null,
+        primary key (AlertId)
+    )
+
+
+
+SELECT CURRENT_TIME;SELECT LOCALTIME;
+SET TIMEZONE ='Australia/Darwin';  
+
+
+SELECT time '10:00' - time '02:00' AS result;
+
+  result
+----------
+ 08:00:00
+(1 row)
+
+
+
+
+insert into AlertModel(
+alertid,alertmessage,alerttitle,date)
+values 
+(1,'test case  message','TEst case Title','2020-10-05 14:01:10-08');

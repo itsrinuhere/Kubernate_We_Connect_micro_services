@@ -1,0 +1,65 @@
+EXCEPTIONS 
+
+URL -->
+@DELETE    
+http://localhost:8080/Rest/api/deletealerts/{id} --> working
+		-> if sucees 204 else 304->notfound or not deleted
+			204 No Content - HTTP
+			The HTTP 204 No Content success status response code indicates that a request has succeeded, but that the client doesn't need to navigate away from its current page. This might be used, for example, when implementing "save and continue editing" functionality for a wiki site.
+			Similar search: how to know if http 204 is a success
+1.delete is working but with deprecated api of session.delete(object)
+
+-->delete updated
+
+
+@GET
+http://localhost:8080/Rest/api/getallalerts/ --> working
+@post
+http://localhost:8080/Rest/api/insertAlerts/ --> working
+OBJECT
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alertModel>
+        
+        <alertMessage>teswrt case dsd message</alertMessage>
+        <alertTitle>TEdwst case Title</alertTitle>
+        <date>2020-10-05T14:01:10+05:20</date>
+    </alertModel>
+   
+ reflected1jakarta.persistence.TransactionRequiredException: no transaction is in progress
+	at org.hibernate.internal.AbstractSharedSessionContract.checkTransactionNeededForUpdateOperation(AbstractSharedSessionContract.java:445)
+	
+
+for(int i=0;i<10;i++) {
+		model.setAlertMessage(msg[i]);
+		model.setAlertTitle(title[i]);
+		model.setDate(date);
+	//	assertEquals(repo.saveAlert(model),true);
+	}
+
+2020-10-05T14:01:10+05:30
+
+
+
+
+
+
+curl --location --request DELETE 'http://localhost:8080/Rest/api/deletealerts/7' \
+--data-raw '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<alertModel>
+    <alertMessage>teswrt case dsd message</alertMessage>
+    <alertTitle>TEdwst case Title</alertTitle>
+    <date>2020-10-05T14:01:10+05:20</date>
+</alertModel>'
+
+
+
+INSERT--> working and testing completed integration is not completed
+http://localhost:8080/Rest/api/insertAlerts/
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <alertModel>
+       
+        <alertMessage> message</alertMessage>
+        <alertTitle>Test Title</alertTitle>
+        <date>2020-10-05T14:11:10+05:30</date>
+    </alertModel>
